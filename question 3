@@ -1,0 +1,22 @@
+private void loginDtmActionPerformed(java.awt.event.ActionEvent evt) {                                         
+       
+        String newUsername = username.getText().toString();
+        String newPassword = password.getText().toString();
+                
+        if(newUsername.contentEquals(user)){
+            if(newPassword.contentEquals(pass)){
+                JOptionPane.showMessageDialog(this, "Login Successful", user, WIDTH);
+                
+                Home home = new Home();
+                home.setVisible(true);
+                
+                this.setVisible(false);
+                
+            }else{
+                JOptionPane.showMessageDialog(this, "Password Incorrect", user, WIDTH);
+
+            }
+        }else{
+            JOptionPane.showMessageDialog(this, "User not found", user, WIDTH);
+        }
+    }            
