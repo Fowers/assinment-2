@@ -1,0 +1,9 @@
+private void insertBtnActionPerformed(java.awt.event.ActionEvent evt) {                                          
+        String username=Username.getText().toString();
+        String password=Password.getText().toString();
+        String role=Role.getText().toString();
+        
+        DBOperation dbo=new DBOperation();
+        String result=dbo.insert(username, password, role);
+        JOptionPane.showMessageDialog(this, result, "Operation Result" , WIDTH);
+    }     
